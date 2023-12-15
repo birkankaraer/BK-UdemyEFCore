@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyEFCore.DatabaseFirst", "UdemyEFCore.DatabaseFirst\UdemyEFCore.DatabaseFirst.csproj", "{E81F18C1-D229-4B9A-B387-8D144366FB23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdeymEFCore.DatabaseFirstByScaffold", "UdeymEFCore.DatabaseFirstByScaffold\UdeymEFCore.DatabaseFirstByScaffold.csproj", "{60A9A6A2-C476-4D4C-97ED-19EC191F6762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdeymEFCore.DatabaseFirstByScaffold", "UdeymEFCore.DatabaseFirstByScaffold\UdeymEFCore.DatabaseFirstByScaffold.csproj", "{60A9A6A2-C476-4D4C-97ED-19EC191F6762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyEFCore.CodeFirst", "UdemyEFCore.CodeFirst\UdemyEFCore.CodeFirst.csproj", "{FA9B25A2-12BE-4DFB-94EA-59AFF87590A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyEFCore.CodeFirst", "UdemyEFCore.CodeFirst\UdemyEFCore.CodeFirst.csproj", "{FA9B25A2-12BE-4DFB-94EA-59AFF87590A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
