@@ -11,11 +11,21 @@ namespace UdemyEFCore.CodeFirst.DAL
     public class AppDbContext:DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             Initializer.Build();
             optionsBuilder.UseSqlServer(Initializer.Configuration.GetConnectionString("SqlCon"));
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //has ile başlanıcak arkasından with ifadesini kullanacağız
+            //modelBuilder.Entity<Category>().HasMany(x => x.Products).WithOne(x => x.Category).HasForeignKey(x=>x.Category_Id);
+
+            base.OnModelCreating(modelBuilder);
+
         }
 
         //public override int SaveChanges()
@@ -24,7 +34,7 @@ namespace UdemyEFCore.CodeFirst.DAL
         //    {
         //        if (e.Entity is Product p)
         //        {
-        //            if (e.State == EntityState.Added) 
+        //            if (e.State == EntityState.Added)
         //            {
         //                p.CreatedDate = DateTime.Now;
 
