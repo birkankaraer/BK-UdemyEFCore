@@ -14,11 +14,11 @@ namespace UdemyEFCore.CodeFirst.DAL
         //[StringLength(100,MinimumLength =20)]Hem veri tabanı etkisi hem de validation etkisi
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public int Kdv { get; set; }
         public int Stock { get; set; }
         public int Barcode { get; set; }
-        public int Category_Id { get; set; }// Kategori tablosuna ait Id, Foreign Key
-        //[ForeignKey("Category_Id")]
-        //public Category Category { get; set; } //navigation prop.
-        public ProductFeature ProductFeature { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public decimal PriceKdv { get; set; }
+
     }
 }
