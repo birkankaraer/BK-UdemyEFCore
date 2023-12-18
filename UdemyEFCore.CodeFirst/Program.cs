@@ -5,7 +5,12 @@ using UdemyEFCore.CodeFirst.DAL;
 Initializer.Build();
 using (var _context = new AppDbContext())
 {
-    _context.Products.Add(new Product { Name ="kalem1",Price=200,Stock=1,Barcode=123,Kdv=18});
-    _context.SaveChanges();
+
+    var category = await _context.Categories.FirstAsync();
+
+    Console.WriteLine("Category çekildi");
+    var products = category.Products;
+
+
     Console.WriteLine("işlem bitti");
 }

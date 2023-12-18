@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,12 +14,13 @@ namespace UdemyEFCore.CodeFirst.DAL
         public int Id { get; set; }
         //[StringLength(100,MinimumLength =20)]Hem veri tabanı etkisi hem de validation etkisi
         public string Name { get; set; }
+        [Precision(18,2)]
         public decimal Price { get; set; }
-        public int Kdv { get; set; }
         public int Stock { get; set; }
         public int Barcode { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public decimal PriceKdv { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual ProductFeature ProductFeature { get; set; }
 
     }
 }
