@@ -1,16 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using UdemyEFCore.CodeFirst;
 using UdemyEFCore.CodeFirst.DAL;
 
 Initializer.Build();
 using (var _context = new AppDbContext())
 {
+    //_context.Persons.Add(new Manager() { FirstName="M1" ,LastName="M2",Age=22,Grade=1});
+    //_context.Persons.Add(new Employee() { FirstName = "M1", LastName = "M2", Age = 22, Salary = 1000 });
 
-    var category = await _context.Categories.FirstAsync();
+    var managers = _context.Managers.ToList();
+    var employees = _context.Employees.ToList();
+    var person = _context.Persons.ToList();
 
-    Console.WriteLine("Category çekildi");
-    var products = category.Products;
+    person.ForEach(p =>
+    {
+        switch (p)
+        {
 
+            case Manager manager:
+                Console.WriteLine($"manager entity:{manager.Grade}");
+                break;
+            case Employee employee:
+                Console.WriteLine($"employee entity:{employee.Salary}");
+                break;
+        }
+    });
 
-    Console.WriteLine("işlem bitti");
+    _context.SaveChanges();
 }
