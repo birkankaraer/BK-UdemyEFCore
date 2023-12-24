@@ -12,7 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B18DF96-918F-42E4-A3F9-9CD4FDCCC3F8}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency.Web", "Concurrency.Web\Concurrency.Web.csproj", "{DD16CFDB-D40C-46EE-B1C6-7621E9A1E6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency.WebMVC", "Concurrency.WebMVC\Concurrency.WebMVC.csproj", "{1BB0492A-8639-4B82-94BA-319E1279BAA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +37,14 @@ Global
 		{FA9B25A2-12BE-4DFB-94EA-59AFF87590A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9B25A2-12BE-4DFB-94EA-59AFF87590A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9B25A2-12BE-4DFB-94EA-59AFF87590A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD16CFDB-D40C-46EE-B1C6-7621E9A1E6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD16CFDB-D40C-46EE-B1C6-7621E9A1E6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD16CFDB-D40C-46EE-B1C6-7621E9A1E6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD16CFDB-D40C-46EE-B1C6-7621E9A1E6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB0492A-8639-4B82-94BA-319E1279BAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB0492A-8639-4B82-94BA-319E1279BAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB0492A-8639-4B82-94BA-319E1279BAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB0492A-8639-4B82-94BA-319E1279BAA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

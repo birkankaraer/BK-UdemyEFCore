@@ -11,7 +11,7 @@ using UdemyEFCore.CodeFirst.DAL;
 namespace UdemyEFCore.CodeFirst.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231219185945_initial")]
+    [Migration("20231222091805_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -55,13 +55,17 @@ namespace UdemyEFCore.CodeFirst.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("DiscountPrice")
+                        .HasPrecision(9, 2)
+                        .HasColumnType("decimal(9,2)");
+
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Price")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(9, 2)
+                        .HasColumnType("decimal(9,2)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -69,6 +73,8 @@ namespace UdemyEFCore.CodeFirst.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("Name");
 
                     b.ToTable("Products");
                 });
